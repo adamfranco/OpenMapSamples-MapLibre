@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "Provides an OpenMapSamples control in MapLibre",
   "type": "module",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adamfranco/OpenMapSamples-MapLibre.git"
@@ -23,7 +22,9 @@
   },
   "homepage": "https://github.com/adamfranco/OpenMapSamples-MapLibre#readme",
   "dependencies": {
-    "maplibre-gl": "^2.0",
     "openmapsamples": "github:adamfranco/OpenMapSamples"
+  },
+  "peerDependencies": {
+    "maplibre-gl": "^2 || ^3"
   }
 }
