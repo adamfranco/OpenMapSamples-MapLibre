@@ -304,8 +304,9 @@ export default class SampleControl {
     var sampleControl = this;
     var style = this._map.getStyle();
 
-    // Load a GeoJSON object and then filter what data is returned based off the feature's`layerId` property
-    addProtocol('openmapsamples-' + sample.getId(), (params, cb) => {
+    // Load a GeoJSON object and then filter what data is returned based off the feature's`layerId` property.
+    // MapLibre 3+ protocol handlers return a Promise resolving to {data}.
+    addProtocol('openmapsamples-' + sample.getId(), async (params) => {
       const chunks = params.url.split('/');
       const layerId = chunks[2];
       const zoom = sampleControl.getSampleZoom(sample);
@@ -316,7 +317,7 @@ export default class SampleControl {
         var ret = new Layer().getGeoJson(zoom);
       }
       // console.log('openmapsamples-' + sample.getId(), { layerId, params, ret, chunks });
-      return cb(null, ret);
+      return { data: ret };
     });
 
     var originalSourceIds = [];
