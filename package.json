@@ -1,6 +1,6 @@
 {
   "name": "openmapsamples-maplibre",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Provides an OpenMapSamples control in MapLibre",
   "type": "module",
   "scripts": {},
@@ -25,6 +25,6 @@
     "openmapsamples": "github:adamfranco/OpenMapSamples"
   },
   "peerDependencies": {
-    "maplibre-gl": "^5.24.0"
+    "maplibre-gl": "^5.24.1 || ^6.9.0"
   }
 }
