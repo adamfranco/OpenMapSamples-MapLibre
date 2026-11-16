@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/adamfranco/OpenMapSamples-MapLibre#readme",
   "dependencies": {
-    "maplibre-gl": "^5.24.0",
     "openmapsamples": "github:adamfranco/OpenMapSamples"
+  },
+  "peerDependencies": {
+    "maplibre-gl": "^5.24.0"
   }
 }
